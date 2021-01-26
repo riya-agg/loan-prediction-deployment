@@ -1,1 +1,1 @@
-# loan-prediction-deployment
+# loan-status-prediction-deployment
