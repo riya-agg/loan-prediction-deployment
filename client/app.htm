@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Status Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!-- <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css"> -->
+	
+	<script src="{{ url_for('static',filename='app.js') }}"></script>
+	<link rel="stylesheet"  href= "{{ url_for('static',filename='app.css') }}">
+	
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Marital Status</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-mar-1" name="uimarried" value="Yes"/>
+		<label for="radio-mar-1">Yes</label>
+		<input type="radio" id="radio-mar-2" name="uimarried" value="No"/>
+		<label for="radio-mar-2">No</label>
+	</div>
+	</form>
+
+<form class="form">
+	<h2>Number of Dependents</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-dep-1" name="uidependents" value="0"/>
+		  <label for="radio-dep-1">0</label>
+		<input type="radio" id="radio-dep-2" name="uidependents" value="1"/>
+		  <label for="radio-dep-2">1</label>
+		<input type="radio" id="radio-dep-3" name="uidependents" value="2"/>
+		  <label for="radio-dep-2">2</label>
+		<input type="radio" id="radio-dep-4" name="uidependents" value="3+"/>
+		  <label for="radio-dep-2">3+</label>
+	</div>
+	</form>
+
+<form class="form">
+	<h2>Graduation</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-grad-1" name="uigraduation" value="Graduated"/>
+		<label for="radio-grad-1">Graduated</label>
+		<input type="radio" id="radio-grad-2" name="uigraduation" value="Not Graduated"/>
+		<label for="radio-grad-2">Not Graduated</label>
+	</div>
+	</form>
+
+<form class="form">
+	<h2>Self-Employed?</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-self-1" name="uiselfemployed" value="Yes"/>
+		<label for="radio-self-1">Yes</label>
+		<input type="radio" id="radio-self-2" name="uiselfemployed" value="No"/>
+		<label for="radio-self-2">No</label>
+	</div>
+	</form>
+
+<form class="form">
+	<h2>Applicant Income</h2>
+    <input class="applicantincome"  type="text" id="uiapplicantincome" class="floatLabel" name="Applicant Income" value="1000">
+</form>
+
+<form class="form">
+	<h2>Co-Applicant Income</h2>
+    <input class="coapplicantincome"  type="text" id="uicoapplicantincome" class="floatLabel" name="Co-Applicant Income" value="1000">
+</form>
+
+<form class="form">
+	<h2>Loan Amount</h2>
+    <input class="loanamount"  type="text" id="uiloanamount" class="floatLabel" name="Loan Amount" value="1000">
+</form>
+
+<form class="form">
+	<h2>Loan Amount Term</h2>
+    <input class="loanamountterm"  type="text" id="uiloanamountterm" class="floatLabel" name="Loan Amount Term" value="1">
+</form>
+
+<form class="form">
+	<h2>Credit History</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-credit-1" name="uicredithistory" value="1"/>
+		<label for="radio-credit-1">1</label>
+		<input type="radio" id="radio-credit-2" name="uicredithistory" value="0"/>
+		<label for="radio-credit-2">0</label>
+	</div>
+	</form>
+
+<form class="form">
+	<h2>Property Area</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-property-1" name="uipropertyarea" value="Rural"/>
+		<label for="radio-property-1">Rural</label>
+		<input type="radio" id="radio-property-2" name="uipropertyarea" value="Semiurban"/>
+		<label for="radio-property-2">Semiurban</label>
+		<input type="radio" id="radio-property-3" name="uipropertyarea" value="Urban"/>
+		<label for="radio-property-3">Urban</label>
+	</div>
+	</form>
+
+	<button class="submit" onclick="onClickedLoanStatus()" type="button">Estimate Loan Status</button>
+	<div id="uiLoanStatus" class="result">	<h2></h2> </div>
+</body>
+</html>
